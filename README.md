@@ -57,10 +57,17 @@ We are adding setting a flag on redis-cli which will change the font color of ou
 
 ####Monitoring
 
+We are performing monitoring on our instances based on two metrics : CPU usage and Memory usage: 
 
-####History of past builds
+The file for the code of monitoring [main.js](https://docs.google.com/a/ncsu.edu/forms/d/1V_n7snDQOj06ZnpZ1zu_QSgzdFltwVCiRxixy16B-9A/viewform?usp=send_form).
 
-![Jenkins build history page to track logs](https://github.com/Shraddha512/MS1/blob/master/images/Screen%20Shot%202015-10-01%20at%2010.18.34%20PM.png)
+
+![Output](https://github.com/Shraddha512/M3-Deployment/blob/master/images/Screen%20Shot%202015-11-17%20at%2010.20.08%20PM.png)
+
+
+####Canary Release.
+
+
 
 
 <h3>Screencast </h3>
