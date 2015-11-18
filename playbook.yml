@@ -1,0 +1,58 @@
+---
+- hosts: ec2
+  user: ec2-user
+  sudo: yes
+  tasks:
+    - name: Installs python
+      yum: pkg=python state=latest
+
+    - name: Installs n
+      shell: curl --silent --location https://rpm.nodesource.com/setup | bash -
+      ignore_errors: True
+
+    - name: Installs nodejs after curl
+      yum: pkg=nodejs state=latest
+
+    - name: Installs git
+      yum: pkg=git state=latest
+
+    - name: Installs flask
+      pip: name=flask state=latest
+
+    - name: Installs redis
+      pip: name=redis state=latest
+
+    - name: Installs sqlite
+      yum: pkg=sqlite state=latest
+
+    - name: Installs sqlite-devel
+      yum: pkg=sqlite-devel state=latest
+
+    - name: Installs wget
+      yum: pkg=wget state=latest
+
+    - name: Installs make
+      yum: pkg=make state=latest
+
+    - name: Installs gcc
+      yum: pkg=gcc state=latest
+
+    - name: Installs gcc-c++
+      yum: pkg=gcc-c++ state=latest
+
+    - name: Installs tar
+      yum: pkg=tar state=latest
+
+    - name: Download Redis
+      get_url: url=http://download.redis.io/releases/redis-3.0.5.tar.gz dest=/tmp
+
+    - name: Untar Redis
+      command: chdir=/tmp creates=redis-3.0.5 tar -xzf redis-3.0.5.tar.gz
+
+    - name: Install Redis
+      command: creates=/usr/local/bin/redis-server chdir=/tmp/redis-3.0.5 make install
+
+    - name: Launch Redis 1
+      command: chdir=/tmp/redis-3.0.5/src ./redis-server --port 7777
+      async: 30
+      poll: 0
