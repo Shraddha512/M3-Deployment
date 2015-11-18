@@ -102,7 +102,16 @@ An alert is sent as soon as the threshold values specified for the metrics are e
 
 
 #### Task 5: Canary Release
+*(Please note that the proxy server logs are visible in the bottom right, and canary server in the top right in the following screenshots)*
 
+The proxy server redirects 70% of the requests to the main server.
+![Redirect to main server](https://cloud.githubusercontent.com/assets/3266051/11253002/1f7d503c-8e07-11e5-9a65-0c246f75a796.png)
+
+30% of the requests (chosen randomly) are redirected by the proxy to the canary deployment.
+![Redirect to canary](https://cloud.githubusercontent.com/assets/3266051/11253057/66fce350-8e07-11e5-964a-cc24d510260c.png)
+
+If an alert is raised by the server running the canary deployment, the proxy redirects all subsequent requests to the main server.
+![Redirect after alert](https://cloud.githubusercontent.com/assets/3266051/11253081/7e8b7cb6-8e07-11e5-875f-8bf6d182073b.png)
 
 
 
