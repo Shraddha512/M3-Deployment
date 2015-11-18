@@ -1,6 +1,13 @@
 Milestone 3 - Deployment
 ===========
 
+
+**Team Members :**
+
+1. Ankit Agrawal (aagrawa5)
+2. Apoorv Mahajan (amahaja3)
+3. Shraddha Naik (sanaik2)
+
 ### Application
 
 We are creating a Bucket List web application using Python flask framework and sqllite3 as the database.
@@ -59,7 +66,7 @@ We are adding setting a flag on redis-cli which will change the font color of ou
 
 We are performing monitoring on our instances based on two metrics : CPU usage and Memory usage: 
 
-The file for the code of monitoring [main.js](https://docs.google.com/a/ncsu.edu/forms/d/1V_n7snDQOj06ZnpZ1zu_QSgzdFltwVCiRxixy16B-9A/viewform?usp=send_form).
+The file for the code of monitoring [main.js](https://github.com/Shraddha512/M3-Deployment/blob/master/main.js).
 
 
 ![Output](https://github.com/Shraddha512/M3-Deployment/blob/master/images/Screen%20Shot%202015-11-17%20at%2010.20.08%20PM.png)
