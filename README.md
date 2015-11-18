@@ -28,12 +28,15 @@ We are using AWS Code Deploy and S3 buckets for this step. We deploy our code on
 Steps1: We have two Jenkins jobs: 
 1. PythonM1Build which builds the production branch and deploys the code to two instances.
 2. CanaryRelease which builds the dev branch and deploys on subset of the two instances.(one instance).
+
 ![Jenkins jobs](https://github.com/Shraddha512/M3-Deployment/blob/master/images/jenkins%20jobs.png)
 
 Step2: Jenkins uses AWS Code Deploy plugin to zip the latest pushed code and send it to S3 bucket.
+
 ![Console output of Jenkins job](https://github.com/Shraddha512/M3-Deployment/blob/master/images/zipping%20console.png)
 
 Step3: S3 bucket "milestone3shraddha" holds the various versions of code pushed by jenkins job.
+
 ![S3 bucket](https://github.com/Shraddha512/M3-Deployment/blob/master/images/s3bucket.png)
 
 Step4: AWS Code Deploy pulls the latest code from S3 bucket and deploys it. We have two Groups:
@@ -46,17 +49,14 @@ The following are the steps during deployment:
 
 ![AWS Code Deploy Events](https://github.com/Shraddha512/M3-Deployment/blob/master/images/deployevents.png)
 
+####Feature Flags
 
+We are adding setting a flag on redis-cli which will change the font color of our deployed application.
 
-####The ability to determine failure or success of a build job post-build trigger
+![Font Color changed](https://github.com/Shraddha512/M3-Deployment/blob/master/images/redis.png)
 
-We are sending a mail on every failure of our Release job.
+####Monitoring
 
-####Multiple jobs corresponding to multiple branches in a repository.
-
-![](https://github.com/Shraddha512/MS1/blob/master/images/Screen%20Shot%202015-10-01%20at%2010.13.39%20PM.png)
-
-We have two jobs corresponding to two different branchest of our repository(master and dev)
 
 ####History of past builds
 
