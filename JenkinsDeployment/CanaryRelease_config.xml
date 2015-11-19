@@ -68,9 +68,6 @@ chmod +x launch.sh
       <subdirectory></subdirectory>
       <proxyHost></proxyHost>
       <proxyPort>0</proxyPort>
-      <awsAccessKey>AKIAJFJ6IIXRNLT4HZMQ</awsAccessKey>
-      <awsSecretKey>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</awsSecretKey>
-      <credentials>awsAccessKey</credentials>
     </com.amazonaws.codedeploy.AWSCodeDeployPublisher>
   </publishers>
   <buildWrappers/>
