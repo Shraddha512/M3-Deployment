@@ -114,5 +114,4 @@ If an alert is raised by the server running the canary deployment, the proxy red
 
 <h3>Screencast </h3>
 
-<i>Click here to watch the screencast </i>
 [![Click here to watch the screencast] (https://youtu.be/drVdHQMedyI)](https://youtu.be/4CTNIQw-mHg)
